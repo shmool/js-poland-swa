@@ -1,0 +1,16 @@
+<!-- Based on https://github.com/firebase/firebaseui-web -->
+
+<a [href]="'.auth/login/' + provider.id + '?post_login_redirect_uri=/'"
+  class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-id-idp-button"
+  [ngClass]="'firebaseui-idp-' + provider.cssClass"
+  [style]="'background-color:' + provider.bgColor"
+  data-upgraded=",MaterialButton">
+    <span class="firebaseui-idp-icon-wrapper">
+      <img class="firebaseui-idp-icon"
+           alt=""
+           [src]="'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/' + provider.image">
+    </span>
+  <span
+    class="firebaseui-idp-text firebaseui-idp-text-long">Sign in with {{ provider.name }}</span><span
+  class="firebaseui-idp-text firebaseui-idp-text-short">{{ provider.name }}</span>
+</a>

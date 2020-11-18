@@ -1,0 +1,20 @@
+<!-- Based on https://github.com/firebase/firebaseui-web -->
+
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css"/>
+
+<div id="firebaseui-container" lang="en">
+  <div
+    class="firebaseui-container firebaseui-page-provider-sign-in firebaseui-id-page-provider-sign-in firebaseui-use-spinner">
+    <div class="firebaseui-card-content">
+      <form onsubmit="return false;">
+        <ul class="firebaseui-idp-list">
+          <li *ngFor="let provider of providers" class="firebaseui-list-item">
+            <app-login-provider [provider]="provider"></app-login-provider>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+
+

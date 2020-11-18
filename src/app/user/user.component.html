@@ -1,0 +1,23 @@
+<div *ngIf="user$ | async as user else signIn">
+  <mat-spinner *ngIf="user.pending" diameter="30" color="accent"></mat-spinner>
+  <div *ngIf="user.userId">
+    <a mat-button
+       routerLink="user-details">
+      <mat-icon color="accent"
+                class="nav-icon"
+                aria-hidden="false"
+                aria-label="user icon">account_circle
+      </mat-icon>
+      <span class="hide-small">{{user.username}}</span>
+    </a>
+  </div>
+</div>
+
+<ng-template #signIn>
+  <a mat-button
+     routerLink="login"
+     aria-label="Sign in">
+    <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+    Sign In
+  </a>
+</ng-template>

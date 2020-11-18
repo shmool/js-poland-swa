@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #b1abbb;
+}
+
+.js-poland-toolbar {
+  background: #8d3626;
+  box-shadow: 0 2px 12px 2px black;
+
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+
+  .toolbar-home-link {
+    height: 100%;
+    color: inherit;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .toolbar-title {
+    height: 100%;
+    color: inherit;
+    align-items: center;
+    display: flex;
+    background: #261776;
+    transform: skew(-5deg, 0deg);
+    padding: 0 10px 0 8px;
+    margin-left: -11px;
+    border-right: 8px #dc3c1e solid;
+  }
+}
+
+.js-poland-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
