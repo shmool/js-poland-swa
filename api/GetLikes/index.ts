@@ -8,6 +8,8 @@ const httpTrigger: AzureFunction =
   async (context: Context, req: HttpRequest): Promise<void> => {
     const likesClient = new CosmosDBClient('likes');
     const likesRes = await getLikesFromDB();
+    likesRes.headers = req.headers;
+
 
     const userRes = await getUserFromDB(req);
     if (!(userRes instanceof ErrorRes)) {
