@@ -12,6 +12,8 @@ const httpTrigger: AzureFunction =
     const userRes = await getUserFromDB(req);
     if (!(userRes instanceof ErrorRes)) {
       likesRes.userLikes = userRes.resource.likes;
+    } else {
+      likesRes.error = userRes;
     }
 
     context.res = {
