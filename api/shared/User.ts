@@ -16,11 +16,13 @@ export class User {
   id;
   userId;
   created: Date;
+  likes: number;
 
   constructor(public clientPrincipal: IClientPrincipal) {
     this.id = clientPrincipal.userId;
     this.userId = clientPrincipal.userId;
     this.created = new Date();
+    this.likes = 0;
   }
 }
 

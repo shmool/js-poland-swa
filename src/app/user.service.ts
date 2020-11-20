@@ -25,7 +25,6 @@ export class UserService {
   user$: BehaviorSubject<User> = new BehaviorSubject(pendingUser);
 
   constructor(private http: HttpClient) {
-    this.user$.subscribe(console.log)
     this.http.get<AppUser>('.auth/me').subscribe(user => {
         this.user$.next(user.clientPrincipal ?
           {

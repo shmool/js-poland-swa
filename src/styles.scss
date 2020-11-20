@@ -8,6 +8,36 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: #b1abbb;
+
+}
+
+// media
+.show-extra-small, .show-small, .show-medium, .show-large {
+  display: none !important;
+}
+
+@media (max-width: 540px){
+  .show-extra-small {
+    display: inherit !important;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 720px){
+  .show-small {
+    display: inherit !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+  .show-medium {
+    display: inherit !important;
+  }
+}
+
+@media (min-width: 961px) {
+  .show-large {
+    display: inherit !important;
+  }
 }
 
 .js-poland-toolbar {
